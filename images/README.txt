@@ -1,0 +1,1 @@
+Place image in this folder on which to run YOLOv2 algorithm. By default, script.py runs YOLOv2 model on image named 'image.jpg'. 
