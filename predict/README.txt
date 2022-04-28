@@ -1,0 +1,1 @@
+Folder in which script.py saves its output images.
