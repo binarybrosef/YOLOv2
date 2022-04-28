@@ -18,6 +18,16 @@ This implementation of YOLOv2 detects eighty different object classes derived fr
 
 Bounding box sizes are selected that are suitable for detecting vechicles and other objects captured from the perspective of a forward-facing car-mounted camera that captures scenes of driving and traffic. These bounding boxes sizes are encoded in `/model/yolo_anchors.txt`.
 
+## Loading a YOLOv2 Model
+A pre-trained YOLOv2 model named `yolo.h5` is expected in the `/model` folder. One way to obtain this model is to: 
+- download YOLOv2 weights from [https://pjreddie.com/media/files/yolov2.weights](https://pjreddie.com/media/files/yolov2.weights)
+- from [Allan Zelener's YAD2K Github repository](https://github.com/allanzelener/YAD2K), download `yad2k.py`
+- in the folder containing `yad2k.py`, execute the following:
+```
+/yad2k.py yolo.cfg yolov2.weights model_data/yolo.h5
+```
+- finally, place the `yolo.h5` file in the `/models` directory.
+
 ## Script Use
 `script.py` loads a pre-trained YOLOv2 model located at `/model/yolo.h5` and applies the model to a user-specified image of default name `image.jpg` located in the `/images` directory. A resultant output image is saved in the `/predict` directory, consisting of the original user-specified image with bounding boxes produced by the YOLOv2 model indicating detected objects and their spatial boundaries. 
 
